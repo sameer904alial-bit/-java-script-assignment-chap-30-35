@@ -114,3 +114,175 @@ document.write("Late Payment Surcharge: " + latePaymentSurcharge.toFixed(2) + "<
 document.write("Gross Amount Payable (after Due Date): " + grossAmount.toFixed(2));
 
 
+// now for chapter 35-38
+
+
+// Question no 1
+
+function currentDateTime() {
+    var now = new Date();
+    console.log("Current date and time: " + now);
+}
+
+// Question no 2 
+
+function greetUser(firstName, lastName) {
+    var fullName = firstName + " " + lastName;
+    console.log("Hello, " + fullName + "!");
+}
+
+// Question no 3
+
+function addNumbers(a, b) {
+  return a + b;
+}
+
+let num1 = Number(prompt("Enter first number:"));
+let num2 = Number(prompt("Enter second number:"));
+
+let result = addNumbers(num1, num2);
+
+console.log("Sum is: " + result);
+
+// Question no 4
+function calculator(num1, num2, operator) {
+  if (operator === "+") {
+    return num1 + num2;
+  } 
+  else if (operator === "-") {
+    return num1 - num2;
+  } 
+  else if (operator === "*") {
+    return num1 * num2;
+  } 
+  else if (operator === "/") {
+    return num2 !== 0 ? num1 / num2 : "Cannot divide by zero";
+  } 
+  else {
+    return "Invalid operator";
+  }
+}
+
+let num1 = Number(prompt("Enter first number:"));
+let num2 = Number(prompt("Enter second number:"));
+let operator = prompt("Enter operator (+, -, *, /):");
+
+let result = calculator(num1, num2, operator);
+document.write("Result: " + result);
+
+// Question no 5
+
+function square(num) {
+  return num * num;
+}
+let number = Number(prompt("Enter a number to find its square:"));
+let squaredValue = square(number);
+console.log("The square of " + number + " is: " + squaredValue);
+
+// Question no 6
+
+// cannot understand
+
+// Question no 7
+
+function showCounting(start, end) {
+  for (let i = start; i <= end; i++) {
+    document.write(i + "<br>");
+  }
+}
+let startNumber = Number(prompt("Enter start number:"));
+let endNumber = Number(prompt("Enter end number:"));
+showCounting(startNumber, endNumber);
+
+// Question no 8
+function calculateHypotenuse(base, perpendicular) {
+
+  function calculateSquare(num) {
+    return num * num;
+  }
+
+  return Math.sqrt(calculateSquare(base) + calculateSquare(perpendicular));
+}
+
+let base = Number(prompt("Enter base:"));
+let perpendicular = Number(prompt("Enter perpendicular:"));
+
+let result = calculateHypotenuse(base, perpendicular);
+
+document.write("Hypotenuse is: " + result);
+
+// Question no 9
+
+function calculateArea(width, height) {
+  return width * height;
+}
+
+var width = Number(prompt("Enter width:"));
+var height = Number(prompt("Enter height:"));
+
+var totalArea = calculateArea(width, height);
+
+consolele.log("Area of the rectangle is: " + totalArea);
+
+// Question no 10
+
+// Question  no 11 
+
+function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+let inputString = prompt("Enter a string:");
+let result = capitalizeFirstLetter(inputString);
+console.log("String with first letter capitalized: " + result);
+
+// Question no 12
+
+function findLongestWord(str) {
+    let words = str.split(" ");
+    let longestWord = "";
+    for (let word of words) {
+        if (word.length > longestWord.length) {
+            longestWord = word;
+        }
+    }
+    return longestWord;
+}
+let inputString = prompt("Enter a string:");
+let longest = findLongestWord(inputString);
+console.log("Longest word: " + longest);
+
+// Question no 13
+
+function countLetter(str, letter) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === letter) {
+      count++;
+    }
+  }
+  return count;
+}
+let text = prompt("Enter a string:");
+let letter = prompt("Enter the letter to count:");
+
+let result = countLetter(text, letter);
+
+console.log("The letter '" + letter + "' appears " + result + " times.");
+
+
+    // Question no 14
+
+function calcCircumference(radius) {
+  let circumference = 2 * Math.PI * radius;
+  document.write("The circumference is: " + circumference + "<br>");
+}
+
+
+function calcArea(radius) {
+  let area = Math.PI * radius * radius;
+  document.write("The area is: " + area + "<br>");
+}
+
+let radius = Number(prompt("Enter the radius of the circle:"));
+calcCircumference(radius);
+calcArea(radius);
